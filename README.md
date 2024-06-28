@@ -57,7 +57,9 @@ Copy the generated webhook URL.
 
 6. Scan the QR code to chat with the bot.
 
-Note: The generated webhook will be active for 72 hours only. 
+**Note**: 
+The generated webhook will be active for 72 hours only. 
+Due to Vonage account limitations, interactions are limited to approximately 15 message exchanges (sending and receiving messages) per account.
 
 ## Project Structure
 
