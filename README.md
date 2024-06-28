@@ -80,14 +80,13 @@ Whatsapp_Data_Buffet/
 
 ## Description of Each File
 
-- **function_calling.py**: Contains function descriptions with function names, descriptions, parameters, and parameter types for each function. Processes a given question by dynamically selecting and calling the appropriate internal function (copay status, prior authorization status, insurance updates, case reports, lead details) based on the context of the question provided.
-- **db_utils.py**: Sets up and manages connections to a PostgreSQL database. Initializes a language model from Hugging Face and generates SQL queries based on user questions to retrieve relevant data from specified database tables. Ensures conversational and accurate responses to user inquiries by leveraging natural language processing techniques.
-- **vonage.py**: Sends messages via the Vonage API. The primary function sends a text message to a specified recipient using the WhatsApp channel, handling the API request and authentication process.
-- **main.py**: Serves as the core component of the application, responsible for extracting messages received from WhatsApp, processing them, and sending responses back to the user through Vonage. Sets up a Flask server with routes to handle incoming messages, ensures messages are processed uniquely using threading locks, and generates appropriate responses.
-- **ngrok.exe**: Ngrok is used to create secure tunnels to your localhost, making it accessible over the internet. It is useful for exposing your local Flask server to Vonage's webhooks, allowing Vonage to send incoming messages to your local development environment. It simplifies the development and testing process by providing a public URL for your locally running application.
-- **.env**: Contains credentials and configuration parameters for the Mistral model, Mistral fine-tuning, Vonage API, and Database connection settings.
-requirements.txt: Contains all necessary import statements for Python dependencies required to run the application.
-
+- **function_calling.py**: Contains function metadata and dynamically calls internal functions based on user queries.
+- **db_utils.py**: Manages PostgreSQL connections and generates SQL queries using a Mistral model.
+- **vonage.py**: Sends WhatsApp messages via the Vonage API, handling requests and authentication.
+- **main.py**: Core application component for processing WhatsApp messages and responding via Flask.
+- **ngrok.exe**: Creates secure tunnels to localhost, enabling public access for Vonage webhooks.
+- **.env**: Stores credentials and configuration for Mistral, Vonage API, and database connections.
+- **requirements.txt**: Lists Python dependencies required to run the application.
 
 ## Sample Questions
 
