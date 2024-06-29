@@ -1,35 +1,27 @@
 import json
 import os
 import functools
+from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_mistralai import ChatMistralAI
 from mistralai.client import MistralClient
 from dotenv import load_dotenv
 from mistralai.models.chat_completion import ChatMessage
 from fastapi import HTTPException
 from langchain_core.output_parsers import JsonOutputParser
-
-
 from langchain.prompts import PromptTemplate 
+from mistralai.client import MistralClient
+from mistralai.models.chat_completion import ChatMessage
+from db_utils import get_data, get_data_pa_status, get_data_insurance, get_data_case, get_data_lead
 
 base_dir = os.path.abspath(__file__)
 
 load_dotenv()
-
-import json
-from app.db_utils import get_data, get_data_pa_status, get_data_insurance, get_data_case, get_data_lead
-from mistralai.client import MistralClient
-import functools
-from mistralai.models.chat_completion import ChatMessage
-
-
-from langchain_core.pydantic_v1 import BaseModel, Field
 
 # Read model_id and api_key from environment variables
 fine_tuned_model_id = os.environ.get('MODEL_ID')
 api_key = os.environ.get('FT_MISTRAL_API_KEY')
 
 uft_model = ChatMistralAI(api_key=api_key, model_name='mistral-medium-latest')
-
 
 client = MistralClient(api_key=api_key)
 
@@ -51,10 +43,6 @@ def get_prompt(user_query_val_prompt=None):
             """
             return user_query_val_prompt
         
-
-        
-
-
 def filter_user_query(question):
         print("--filter_user_query--")
 
@@ -81,9 +69,6 @@ def filter_user_query(question):
             return {"status":200,"response":question}
         else:
              return {"status":500,"response":val_response['description']}
-
-# print(filter_user_query(question="what is the lead status for this date of birth '2023-01-15'?"))
-
 
 def common_func(question):
     print("In common_func")
@@ -229,9 +214,6 @@ def common_func(question):
 
     messages = [ChatMessage(role="user", content=question)]
 
-    
-   
-
     response = client.chat(
         model=fine_tuned_model_id,
         messages=messages,
@@ -257,16 +239,13 @@ def common_func(question):
     messages.append(ChatMessage(role="tool", name=function_name, content=data_, tool_call_id=tool_call.id,prompt =""))
 
     print("messages------>", messages)
-
-
     
-    
-#     response = client.chat(
-#         model=fine_tuned_model_id,
-#         messages=messages
-#     )
+    response = client.chat(
+        model=fine_tuned_model_id,
+        messages=messages
+    )
 
-#     print("Final Response---->", response.choices[0].message.content)
+    print("Final Response---->", response.choices[0].message.content)
     
-#     res = response.choices[0].message.content
-#     return res
+    res = response.choices[0].message.content
+    return res
