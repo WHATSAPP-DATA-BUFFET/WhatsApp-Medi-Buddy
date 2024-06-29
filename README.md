@@ -90,11 +90,11 @@ Whatsapp_Data_Buffet/
 
 ## Sample Questions
 
-- `Question 1`: 
-- `Question 2`:
-- `Question 3`: 
-- `Question 4`:
-- `Question 5`: 
+- `Question 1`: Can you confirm if my lead status is qualified or not for the birth date 1991-03-02.
+- `Question 2`: Heyy! I need to know my primary copay balance for a follow-up visit. Can you help? Use this birth date to get my details, 1995-08-27.
+- `Question 3`: I want to check if my prior authorization for the MRI at Imaging Center is still valid for my account with DOB 1991-03-02.
+- `Question 4`: I need to know if my insurance covers my endoscopy treatment. Here is my birth date 1982-12-05.
+- `Question 5`: I reported an adverse effect from a medication. Can you tell me the status of my case for the birth date 1995-08-27? It's important.
 
 
 ---
