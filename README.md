@@ -17,12 +17,12 @@ To run this project on your local machine, follow these steps:
 
 1. Clone the repository:
    ```bash
-    git clone https://github.com/your-username/patient-healthcare-assistant.git
+    git clone https://github.com/WHATSAPP-DATA-BUFFET/Whatsapp_Data_Buffet
    ```
    
 2. Navigate to the project directory:
   ```bash
-      cd patient-healthcare-assistant
+      cd app
   ```
 
 3. Install the required dependencies:
