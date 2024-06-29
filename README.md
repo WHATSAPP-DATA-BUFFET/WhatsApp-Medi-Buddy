@@ -19,13 +19,22 @@ To run this project on your local machine, follow these steps:
    ```bash
     git clone https://github.com/WHATSAPP-DATA-BUFFET/Whatsapp_Data_Buffet
    ```
+
+2. Create a virtual environment and activate
+   ```bash
+    python -m venv <venv_name>
+   ```
+
+   ```bash
+    ./<venv_name>/Scripts/activate
+   ```
    
-2. Navigate to the project directory:
+3. Navigate to the project directory:
   ```bash
       cd Whatsapp_Data_Buffet/app
   ```
 
-3. Install the required dependencies:
+4. Install the required dependencies:
    
 ```bash
     pip install -r requirements.txt
