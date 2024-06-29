@@ -1,11 +1,11 @@
 python-dotenv==1.0.1
 huggingface_hub
 Flask
+pandas
 fastapi
 psycopg2
 langchain
 langchain-community
-
 langchain-core
 langchain-experimental
 langchain-mistralai
