@@ -22,7 +22,7 @@ To run this project on your local machine, follow these steps:
    
 2. Navigate to the project directory:
   ```bash
-      cd app
+      cd Whatsapp_Data_Buffet/app
   ```
 
 3. Install the required dependencies:
