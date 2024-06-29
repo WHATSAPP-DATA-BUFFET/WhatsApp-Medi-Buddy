@@ -37,7 +37,7 @@ To set up the Vonage WhatsApp connection:
 
 1. Go to the `app` folder and run the `main.py` file:
 ```bash
-  python app/main.py
+  python main.py
  ```
 
 2. Run ngrok parallely to create a secure tunnel:
