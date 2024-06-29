@@ -7,8 +7,8 @@ import re
 
 
 from flask import Flask, request, json
-from app.vonage import send_message  # Ensure this function is synchronous
-from app.function_calling import common_func
+from vonage import send_message  # Ensure this function is synchronous
+from function_calling import common_func
 import threading
 import time
 
