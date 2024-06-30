@@ -1,9 +1,9 @@
 
 ---
 
-# WHATSAPP DATA BUFFET
+# WHATSAPP MEDI BUDDY
 
-The WhatsApp Data Buffet is designed to enhance communication and interaction between patients and healthcare providers. Leveraging Mistral AI’s Function Calling fine-tuning APIs, the model is fine-tuned on patient records to efficiently and accurately retrieve information. This assistant handles various patient queries, ensuring quick and precise responses, thereby improving overall patient care and operational efficiency.
+The WhatsApp Medi Buddy is designed to enhance communication and interaction between patients and healthcare providers. Leveraging Mistral AI’s Function Calling fine-tuning APIs, the model is fine-tuned on patient records to efficiently and accurately retrieve information. This assistant handles various patient queries, ensuring quick and precise responses, thereby improving overall patient care and operational efficiency.
 
 ## Table of Contents
 - [Installation](#installation)
